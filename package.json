@@ -1,0 +1,23 @@
+{
+  "name": "ahj_http1_backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "forever --minUptime 1000 --spinSleepTime 1000 server.js",
+    "watch": "forever --minUptime 1000 --spinSleepTime 1000 -w server.js"
+  },
+  "engines": {
+    "node": "12.16.1"
+  },
+  "repository": "https://github.com/KuzminaYuliya/ahj_http1_backend",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "forever": "^4.0.1",
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa2-cors": "^2.0.6",
+    "uuid": "^8.3.2"
+  }
+}
