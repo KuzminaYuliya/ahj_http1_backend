@@ -96,7 +96,7 @@ app.use(async ctx => {
           const newId = uuid.v4();
           const created = new Date();
           tickets.push(new Tickets(newId, name, description, false, created));
-          ctx.response.body = tickets;
+          ctx.response.body = tickets[newId];
         return;
         case 'removeById':
           const index = tickets.findIndex((item) => item.id === id);
@@ -109,7 +109,7 @@ app.use(async ctx => {
             tickets[index].name = name;
             tickets[index].description = description;
           }
-          ctx.response.body = tickets;
+          ctx.response.body = tickets[index];
         return;
           default:
           ctx.response.status = 404;
