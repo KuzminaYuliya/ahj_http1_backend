@@ -109,7 +109,8 @@ app.use(async ctx => {
             tickets[index].name = name;
             tickets[index].description = description;
           }
-          ctx.response.body = tickets[index];
+          ctx.response.body = true;
+          // ctx.response.body = tickets[index];
         return;
           default:
           ctx.response.status = 404;
