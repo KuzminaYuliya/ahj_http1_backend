@@ -96,7 +96,7 @@ app.use(async ctx => {
           const newId = uuid.v4();
           const created = new Date();
           tickets.push(new Tickets(newId, name, description, false, created));
-          ctx.response.body = tickets[newId];
+          ctx.response.body = tickets;
         return;
         case 'removeById':
           const index = tickets.findIndex((item) => item.id === id);
